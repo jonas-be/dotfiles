@@ -1,4 +1,6 @@
-# dotfiles
+# Dotfiles
+Here are my personal dotfiles, which I use for my system configuration. 
+They are currently set up on Fedora, but the differences between distributions should be minimal.
 
 ## To install
 
@@ -9,11 +11,11 @@ Cross-shell prompt, highly configurable
     - ``eval "$(starship init bash)"``
 
 ### Install Hyprland and dependencies
- - (Hyprland via fedora copr)[https://copr.fedorainfracloud.org/coprs/solopasha/hyprland]
+ - [Hyprland via fedora copr](https://copr.fedorainfracloud.org/coprs/solopasha/hyprland)
  - Waybar ``sudo dnf install waybar``
 
 ### Playerctl
-Used to controll media playback, like play or pause
+Used to controll media playback, such as play or pause
  - ``sudo dnf install playerctl``
 
 ### Dunst
@@ -21,6 +23,6 @@ Notification deamon
  - ``sudo dnf install dunst``
 
 ### Grim and Slurp
-Used to make screenshots, with area selector
+Used to take screenshots with an area selector
  - ``sudo dnf install slurp``
  - ``sudo dnf install grim``
