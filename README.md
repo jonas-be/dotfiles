@@ -16,6 +16,10 @@ Cross-shell prompt, highly configurable
 Used to controll media playback, like play or pause
  - ``sudo dnf install playerctl``
 
+### Dunst
+Notification deamon
+ - ``sudo dnf install dunst``
+
 ### Grim and Slurp
 Used to make screenshots, with area selector
  - ``sudo dnf install slurp``
