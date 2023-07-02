@@ -26,3 +26,7 @@ Notification deamon
 Used to take screenshots with an area selector
  - ``sudo dnf install slurp``
  - ``sudo dnf install grim``
+
+### Swaylock
+Used to lock the screen
+ - ``sudo dnf install swaylock``
