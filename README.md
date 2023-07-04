@@ -30,3 +30,8 @@ Used to take screenshots with an area selector
 ### Swaylock
 Used to lock the screen
  - ``sudo dnf install swaylock``
+
+### xdg-desktop-portal-hyprland
+Used for screen sharing
+ - ``sudo dnf install xdg-desktop-portal-hyprland``
+
