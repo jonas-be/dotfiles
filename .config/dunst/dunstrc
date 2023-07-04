@@ -1,10 +1,10 @@
 [global]
 monitor = 0
 follow = none
-width = 300
+width = 500
 height = 300
 origin = top-center
-offset = 15x49
+offset = 15x15
 scale = 0
 notification_limit = 0
 progress_bar = true
@@ -18,8 +18,7 @@ separator_height = 2
 padding = 15
 horizontal_padding = 6
 text_icon_padding = 0
-frame_width = 1
-frame_color = "#8EC07C"
+frame_width = 2
 separator_color = frame
 sort = no
 idle_threshold = 0
