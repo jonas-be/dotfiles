@@ -12,26 +12,34 @@ Cross-shell prompt, highly configurable
 
 ### Install Hyprland and dependencies
  - [Hyprland via fedora copr](https://copr.fedorainfracloud.org/coprs/solopasha/hyprland)
- - Waybar ``sudo dnf install waybar``
+ - ``waybar``
 
 ### Playerctl
 Used to controll media playback, such as play or pause
- - ``sudo dnf install playerctl``
+ - ``playerctl``
 
 ### Dunst
 Notification deamon
- - ``sudo dnf install dunst``
+ - ``dunst``
 
 ### Grim and Slurp
 Used to take screenshots with an area selector
- - ``sudo dnf install slurp``
- - ``sudo dnf install grim``
+ - ``slurp``
+ - ``grim``
+
+### Wl-clipboard
+ Wayland clipbaord util
+  - ``wl-clipboard``
+
+### Wdisplays
+Helper for settings with displays etc. on wayland
+ - ``wdisplays``
 
 ### Swaylock
 Used to lock the screen
- - ``sudo dnf install swaylock``
+ - ``swaylock``
 
 ### xdg-desktop-portal-hyprland
 Used for screen sharing
- - ``sudo dnf install xdg-desktop-portal-hyprland``
+ - ``xdg-desktop-portal-hyprland``
 
