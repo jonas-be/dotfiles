@@ -118,13 +118,13 @@
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
-        "max-length": 20,
+        "max-length": 40,
         "format-icons": {
             "spotify": " ",
-            "default": " "
+            "default": " "
         },
         "escape": true,
-        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+        "exec": "python3 $HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
         "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
