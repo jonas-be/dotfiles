@@ -116,12 +116,13 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{icon} {}",
+        "format": " {icon} {}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotify": " ",
-            "default": " "
+            "spotify": "",
+	    "chromium": "",
+            "default": ""
         },
         "escape": true,
         "exec": "python3 $HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
