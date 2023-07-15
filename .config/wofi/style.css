@@ -1,8 +1,8 @@
 window {
     margin: 0px;
-    background-color: #282a36;
-    border-radius: 30px;
-    background: linear-gradient(#282a36, #282a36) padding-box,
+    background-color: black;
+    border-radius: 22px;
+    background: linear-gradient(black, black) padding-box,
               linear-gradient(135deg, #C678DD, #61AFEF) border-box;
     border: 2px solid transparent;
 }
@@ -11,13 +11,13 @@ window {
     margin: 5px;
     border: none;
     color: #FFFFFF;
-    background-color: #44475a;
-    border-radius: 30px;
+    background-color: #222222;
+    border-radius: 10px;
 }
 
 #input:focus {
-    border-radius: 30px;
-    background: linear-gradient(#282a36, #282a36) padding-box,
+    border-radius: 12px;
+    background: linear-gradient(black, black) padding-box,
               linear-gradient(-45deg, #C678DD, #61AFEF) border-box;
     border: 4px solid transparent;
 
@@ -26,14 +26,14 @@ window {
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #282a36;
+    background-color: black;
     border-radius: 30px;
 }
 
 #outer-box {
     margin: 15px;
     border: none;
-    background-color: #282a36;
+    background-color: black;
 }
 
 #scroll {
@@ -48,13 +48,13 @@ window {
 } 
 
 #entry:selected {
-    background-color: #44475a;
-    border-radius: 20px;
+    background-color: #222222;
+    border-radius: 10px;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #44475a;
-    border-radius: 20px;
+    background-color: #222222;
+    border-radius: 10px;
     outline: none;
 }
