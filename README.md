@@ -43,3 +43,7 @@ Used to lock the screen
 Used for screen sharing
  - ``xdg-desktop-portal-hyprland``
 
+### Alacritty
+Used as terminal emulator
+ - ``Alacritty``
+
