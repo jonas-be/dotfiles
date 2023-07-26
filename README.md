@@ -47,3 +47,16 @@ Used for screen sharing
 Used as terminal emulator
  - ``Alacritty``
 
+### Zsh
+Used instead of bash
+ - ``zsh``
+ - ``sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``
+
+### Fonts
+ - ``nerd-fonts-sf-mono`` (AUR)
+ - ``apple-fonts`` (AUR)
+
+### Powerlevel10k
+ - ``git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k``
+ - Override `ZSH_THEME` in `.zshrc` 
+   - ``ZSH_THEME="powerlevel10k/powerlevel10k"``
