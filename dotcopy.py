@@ -1,4 +1,3 @@
-
 import sys
 import os
 import shutil
@@ -10,7 +9,7 @@ def copy_files(source, destination, is_file=False):
     destination_path = os.path.expanduser(destination)
 
     try:
-        if os.path.exists(destination_path):
+        if not is_file and os.path.exists(destination_path):
             shutil.rmtree(destination_path)
         if is_file:
             shutil.copy2(source_path, destination_path)
