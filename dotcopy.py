@@ -20,17 +20,7 @@ def copy_files(source, destination, is_file=False):
         print(f"An error occurred: {str(e)}")
 
 
-def main():
-    if len(sys.argv) != 3:
-        print("Usage: python x.py [put|get] [entry_name]")
-        return
-
-    action = sys.argv[1]
-    entry_name = sys.argv[2]
-
-    config = configparser.ConfigParser()
-    config.read("config.ini")
-
+def copy_entry(entry_name, action, config):
     if entry_name not in config.sections():
         print(f"No entry found with name '{entry_name}'")
         return
@@ -49,7 +39,25 @@ def main():
     elif action == "get":
         copy_files(destination_path, source_path, is_file)
     else:
-        print("Invalid action. Use 'put' or 'get'.")
+        print(f"Invalid action for entry '{entry_name}'. Use 'put' or 'get'.")
+
+
+def main():
+    if len(sys.argv) < 3:
+        print("Usage: python x.py [put|get|all] [entry_name]")
+        return
+
+    action = sys.argv[1]
+    entry_name = sys.argv[2]
+
+    config = configparser.ConfigParser()
+    config.read("config.ini")
+
+    if entry_name == "all":
+        for entry_name in config.sections():
+            copy_entry(entry_name, action, config)
+    else:
+        copy_entry(entry_name, action, config)
 
 
 if __name__ == "__main__":
