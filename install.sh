@@ -14,5 +14,5 @@ cd ~
 git clone https://github.com/jonas-be/dotfiles.git
 cd dotfiles
 
-python install-pkg.py
+python install-pkgs.py
 echo 'Now use "python dotcopy.py [get | put] <entry>" to get or put dotfile from or in this repo, localy'
