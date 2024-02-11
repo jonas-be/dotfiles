@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S --needed --noconfirm git base-devel python
+pacman -S --needed --noconfirm git base-devel python python-yaml
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git
