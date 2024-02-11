@@ -1,28 +1,43 @@
-arch:
-  core:
+core:
+  pkgs:
     - sudo
     - git
     - python
-    # add a nerdfont
-  shell:
+  # add a nerdfont
+
+shell:
+  pkgs:
     - alacritty
     - zsh
     - thefuck
     - jq
     - yq
-  nvim:
+  install-scripts:
+    - scripts/install/oh-my-zsh.sh
+    - scripts/install/p10k.sh
+  dotfiles:
+    - zsh
+
+nvim:
+  pkgs:
     - clang
-    - neovim 
-  kubernetes:
+    - neovim
+  dotfiles:
+    - nvim
+
+hypr:
+  aurs:
+    - hyprland
+    - xdg-desktop-portal-hyprland
+
+kubernetes:
+  pkgs:
     - kubectl
     - kubectx
     - k9s
-  gaming:
-    - steam
 
-aur:
-  hypr:
-    - hyprland
-    - xdg-desktop-portal-hyprland
-  gaming:
+gaming:
+  pkgs:
+    - steam
+  aurs:
     - minecraft-launcher
