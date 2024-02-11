@@ -2,14 +2,20 @@ arch:
   core:
     - sudo
     - git
+    - python
+    # add a nerdfont
+  shell:
     - zsh
-    - clang
-    - neovim
-  essantails:
     - thefuck
-  programming:
+    - jq
+    - yq
+  nvim:
+    - clang
+    - neovim 
+  kubernetes:
     - kubectl
     - kubectx
+    - k9s
   gaming:
     - steam
 
