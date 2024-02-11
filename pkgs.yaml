@@ -3,6 +3,7 @@ arch:
     - sudo
     - git
     - zsh
+    - clang
     - neovim
   essantails:
     - thefuck
