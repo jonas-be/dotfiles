@@ -14,7 +14,7 @@ shell:
   aurs:
     - zsh-theme-powerlevel10k-git
   dotfiles:
-    - zsh
+    - zshrc
   init-commands:
     - scripts/install-oh-my-zsh.sh
 

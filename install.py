@@ -97,6 +97,34 @@ def install_packages(groups):
         print(f"{c.OKGREEN}All packages installed successfully{c.ENDC}")
 
 
+def copy_dotfiles_entry(dotfiles_entry):
+    try:
+        subprocess.run(["python", "dotcopy.py", "put", dotfiles_entry], check=True)
+        print(f"{c.BOLD}{c.OKGREEN}Dotfiles {dotfiles_entry} copied successfully.{c.ENDC}")
+    except subprocess.CalledProcessError as e:
+        print(f"{c.FAIL}Error copying dotfiles {dotfiles_entry}: {e}{c.ENDC}")
+        return False
+    return True
+
+
+def copy_dotfiles(groups):
+    failed_dotfiles = []
+    for group_key in groups:
+        group = config[group_key]
+        for dotfiles_entry in get(group, 'dotfiles'):
+            print(f"{c.HEADER}Copy {c.BOLD}{dotfiles_entry}{c.ENDC}")
+            if not copy_dotfiles_entry(dotfiles_entry):
+                failed_dotfiles.append(dotfiles_entry)
+
+    # Print failed dotfiles_entries
+    if len(failed_dotfiles) > 0:
+        print(f"{c.FAIL}Failed to copy the following dotfiles:{c.ENDC}")
+        for pkg in failed_dotfiles:
+            print(f"  {c.BOLD}{pkg}{c.ENDC}")
+    else:
+        print(f"{c.OKGREEN}All dotfiles copied successfully{c.ENDC}")
+
+
 # Read YAML file
 with open(yaml_file, "r") as yaml_file:
     config = yaml.safe_load(yaml_file)
@@ -106,5 +134,7 @@ groups = ask_for_groups(config)
 final_question(groups)
 
 print(f"\n{c.BOLD}Installing packages...{c.ENDC}")
-
 install_packages(groups)
+
+print(f"\n{c.BOLD}Copy dotfiles...{c.ENDC}")
+copy_dotfiles(groups)
