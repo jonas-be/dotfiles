@@ -76,7 +76,6 @@ def install_package(package_name, aur=False):
 
 def install_packages(groups):
     failed_pkgs = []
-    print(groups)
     for group_key in groups:
         group = config[group_key]
         for pkg in get(group, 'pkgs'):

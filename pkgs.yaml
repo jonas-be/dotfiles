@@ -9,6 +9,8 @@ shell:
     - thefuck
     - jq
     - yq
+  aurs:
+    - zsh-theme-powerlevel10k-git
   install-scripts:
     - scripts/install/oh-my-zsh.sh
     - scripts/install/p10k.sh
@@ -32,6 +34,11 @@ kubernetes:
     - kubectl
     - kubectx
     - k9s
+
+apps:
+  aurs:
+    - google-chrome
+    - spotify
 
 gaming:
   pkgs:
