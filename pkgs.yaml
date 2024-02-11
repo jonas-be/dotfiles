@@ -1,7 +1,10 @@
 arch:
-  essantails:
+  core:
+    - sudo
+    - git
     - zsh
-    - nvim
+    - neovim
+  essantails:
     - thefuck
   programming:
     - kubectl
