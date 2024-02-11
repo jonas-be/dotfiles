@@ -44,6 +44,7 @@ def final_question(arch_groups, aur_groups):
             print_group(aur[group], True)
     for group in aur_groups:
         if not arch_groups.__contains__(group):
+            print(f' {c.BOLD}{group}{c.ENDC}')
             print_group(aur[group], True)
 
     print('Procced? [Y/n]', end='')
