@@ -4,12 +4,6 @@ They are currently set up on Fedora, but the differences between distributions s
 
 ## To install
 
-### Starship
-Cross-shell prompt, highly configurable
- - ``curl -sS https://starship.rs/install.sh | sh``
- - Paste to `.bashrc` 
-    - ``eval "$(starship init bash)"``
-
 ### Install Hyprland and dependencies
  - [Hyprland via fedora copr](https://copr.fedorainfracloud.org/coprs/solopasha/hyprland)
  - ``waybar``

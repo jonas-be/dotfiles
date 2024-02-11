@@ -1,0 +1,17 @@
+arch:
+  essantails:
+    - zsh
+    - nvim
+    - thefuck
+  programming:
+    - kubectl
+    - kubectx
+  gaming:
+    - steam
+
+aur:
+  hypr:
+    - hyprland
+    - xdg-desktop-portal-hyprland
+  gaming:
+    - minecraft-launcher
