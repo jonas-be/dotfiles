@@ -1,6 +1,8 @@
 core:
   pkgs:
     - ttf-jetbrains-mono-nerd
+    - openssh
+    - less
 
 shell:
   pkgs:
@@ -13,6 +15,8 @@ shell:
     - zsh-theme-powerlevel10k-git
   dotfiles:
     - zsh
+  init-commands:
+    - scripts/install-oh-my-zsh.sh
 
 nvim:
   pkgs:
