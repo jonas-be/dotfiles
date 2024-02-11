@@ -5,7 +5,7 @@ pacman -S --needed --noconfirm git base-devel python
 # Install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 yay -Y --gendb
 yay -Syu --devel
 yay -Y --devel --save
