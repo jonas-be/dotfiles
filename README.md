@@ -1,56 +1,25 @@
 # Dotfiles
-Here are my personal dotfiles, which I use for my system configuration. 
-They are currently set up on Fedora, but the differences between distributions should be minimal.
+
+## Pre-requisites
+
+- This repository checked out
+- yay installed
 
 ## To install
 
-### Install Hyprland and dependencies
- - [Hyprland via fedora copr](https://copr.fedorainfracloud.org/coprs/solopasha/hyprland)
- - ``waybar``
+1. Install packages using the ``install-pkgs.sh`` script.
+2. Copy dotfiles using the ``dotcopy.sh`` script 
+(use the params `get` or `put` followed by the entry onf the config.ini)
 
-### Playerctl
-Used to controll media playback, such as play or pause
- - ``playerctl``
+## Things to install manually
 
-### Dunst
-Notification deamon
- - ``dunst``
+### Oh My Zsh
 
-### Grim and Slurp
-Used to take screenshots with an area selector
- - ``slurp``
- - ``grim``
-
-### Wl-clipboard
- Wayland clipbaord util
-  - ``wl-clipboard``
-
-### Wdisplays
-Helper for settings with displays etc. on wayland
- - ``wdisplays``
-
-### Swaylock
-Used to lock the screen
- - ``swaylock``
-
-### xdg-desktop-portal-hyprland
-Used for screen sharing
- - ``xdg-desktop-portal-hyprland``
-
-### Alacritty
-Used as terminal emulator
- - ``Alacritty``
-
-### Zsh
-Used instead of bash
- - ``zsh``
- - ``sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``
-
-### Fonts
- - ``nerd-fonts-sf-mono`` (AUR)
- - ``apple-fonts`` (AUR)
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ### Powerlevel10k
- - ``git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k``
- - Override `ZSH_THEME` in `.zshrc` 
-   - ``ZSH_THEME="powerlevel10k/powerlevel10k"``
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k```
