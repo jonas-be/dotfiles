@@ -1,9 +1,6 @@
 core:
   pkgs:
-    - sudo
-    - git
-    - python
-  # add a nerdfont
+    - ttf-jetbrains-mono-nerd
 
 shell:
   pkgs:
