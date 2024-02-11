@@ -11,9 +11,6 @@ shell:
     - yq
   aurs:
     - zsh-theme-powerlevel10k-git
-  install-scripts:
-    - scripts/install/oh-my-zsh.sh
-    - scripts/install/p10k.sh
   dotfiles:
     - zsh
 
