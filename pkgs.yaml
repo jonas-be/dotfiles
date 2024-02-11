@@ -5,6 +5,7 @@ arch:
     - python
     # add a nerdfont
   shell:
+    - alacritty
     - zsh
     - thefuck
     - jq
