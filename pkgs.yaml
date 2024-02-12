@@ -33,11 +33,15 @@ hypr:
     - pipewire-audio
     - pipewire-alsa
     - pipewire-pulse
+
+    - gnome-themes-extra
   aurs:
     - hyprland
     - xdg-desktop-portal-hyprland
 
     - aylurs-gtk-shell-git
+    - catppuccin-gtk-theme-mocha
+    - qt6gtk2
 
 kubernetes:
   pkgs:
