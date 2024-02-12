@@ -26,9 +26,17 @@ nvim:
     - nvim
 
 hypr:
+  pkgs:
+    - pipewire
+    - wireplumber
+    - pipewire-audio
+    - pipewire-alsa
+    - pipewire-pulse
   aurs:
     - hyprland
     - xdg-desktop-portal-hyprland
+
+    - aylurs-gtk-shell-git
 
 kubernetes:
   pkgs:
