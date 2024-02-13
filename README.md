@@ -24,13 +24,14 @@ python install.py
 
 Then select what you want to install, by following the instructions of the program.
 
-## Things to install manually/configure
-
-### Oh My Zsh
+## Things to install/configure manually
 
 ```bash
+# Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Set gtk theme
 gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Mauve-Dark
+# Set prefer dark color scheme
 gsettings get org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
