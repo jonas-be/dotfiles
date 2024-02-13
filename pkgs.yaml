@@ -2,22 +2,25 @@ core:
   pkgs:
     - ttf-jetbrains-mono-nerd
     - openssh
-    - less
 
 shell:
   pkgs:
     - alacritty
     - zsh
-    - github-cli
-    - thefuck
-    - jq
-    - yq
   aurs:
     - zsh-theme-powerlevel10k-git
   dotfiles:
     - zshrc
   init-commands:
     - scripts/install-oh-my-zsh.sh
+
+shell-essentails:
+  pkgs:
+    - github-cli
+    - thefuck
+    - jq
+    - yq
+    - less
 
 nvim:
   pkgs:
