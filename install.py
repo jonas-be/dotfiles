@@ -64,9 +64,9 @@ def final_question(groups):
 def install_package(package_name, aur=False):
     try:
         if aur:
-            subprocess.run(["yay", "-S", "--noconfirm", package_name], check=True)
+            subprocess.run(["yay", "-S", "--noconfirm", "--needed", package_name], check=True)
         else:
-            subprocess.run(["sudo", "pacman", "-S", "--noconfirm", package_name], check=True)
+            subprocess.run(["sudo", "pacman", "-S", "--noconfirm", "--needed", package_name], check=True)
         print(f"{c.BOLD}{c.OKGREEN}Package {package_name} installed successfully.{c.ENDC}")
     except subprocess.CalledProcessError as e:
         print(f"{c.FAIL}Error installing package {package_name}: {e}{c.ENDC}")
