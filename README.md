@@ -34,7 +34,6 @@ gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Ma
 # Set prefer dark color scheme
 gsettings get org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
-
 ## What it does?
 
 ### install.py
@@ -93,3 +92,7 @@ python dotcopy.py put <entry>
 # Copy dotfiles from the host system to the repo
 python dotcopy.py get <entry>
 ```
+
+## Special thanks
+
+ - [Aylur](https://github.com/Aylur) for making ags and his dotfiles *(my ags config are currently almost copy paste)*

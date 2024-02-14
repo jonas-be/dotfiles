@@ -28,6 +28,9 @@ shell-essentails:
 nvim:
   pkgs:
     - clang
+    - ripgrep
+    - fd
+    - lazygit
     - neovim
   dotfiles:
     - nvim
@@ -40,14 +43,30 @@ hypr:
     - pipewire-alsa
     - pipewire-pulse
 
+    - bluez
+    - playerctl
+    - wl-clipboard
+    - grim
+    - slurp
+
     - gnome-themes-extra
+    - gjs
+    - gvfs
+
+    - sassc
+    - polkit-gnome
+    - gnome-keyring
+    - gnome-control-center
+    - networkmanager
+    - brightnessctl
+    - gnome-bluetooth-3.0
   aurs:
     - hyprland
     - xdg-desktop-portal-hyprland
 
     - aylurs-gtk-shell-git
-    - catppuccin-gtk-theme-mocha
     - qt6gtk2
+    - swww
 
 kubernetes:
   pkgs:
