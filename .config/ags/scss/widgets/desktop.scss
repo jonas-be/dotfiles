@@ -12,9 +12,6 @@ window.desktop {
     }
 
     .clock-box-shadow {
-        border: 5px solid $wallpaper-fg;
-        border-radius: $radii;
-
         .clock-box {
             border-radius: max($radii - 5px, 0);
             padding: 0 14px;
@@ -44,13 +41,6 @@ window.desktop {
     }
 
     @if $drop-shadow {
-        .clock-box-shadow, separator {
-            box-shadow: 2px 2px 2px 0 $shadow;
-        }
-
-        .clock-box {
-            box-shadow: inset 2px 2px 2px 0 $shadow;
-        }
 
         label {
             text-shadow: $text-shadow;
