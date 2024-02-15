@@ -26,4 +26,4 @@ export editor=nvim
 alias k=kubectl
 alias kx=kubectx
 alias n=nvim
-alias c=~/coding
+alias c=~/Coding
