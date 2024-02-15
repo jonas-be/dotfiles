@@ -49,6 +49,8 @@ hypr:
     - slurp
 
     - gnome-themes-extra
+    - adwaita-qt5-git
+    - adwaita-qt6-git
     - gjs
     - gvfs
 
