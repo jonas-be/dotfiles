@@ -10,7 +10,6 @@ shell:
   pkgs:
     - alacritty
     - zsh
-  aurs:
     - zsh-theme-powerlevel10k-git
   dotfiles:
     - zshrc
@@ -60,7 +59,7 @@ hypr:
     - networkmanager
     - brightnessctl
     - gnome-bluetooth-3.0
-  aurs:
+
     - hyprland
     - xdg-desktop-portal-hyprland
 
@@ -75,12 +74,10 @@ kubernetes:
     - k9s
 
 apps:
-  aurs:
+  pkgs:
     - google-chrome
     - spotify
 
 gaming:
   pkgs:
-    - steam
-  aurs:
     - minecraft-launcher

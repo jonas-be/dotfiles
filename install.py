@@ -36,8 +36,6 @@ def print_group(group):
     print(f"  {c.GRAY}pkgs:{c.ENDC}")
     for pkg in get(group, "pkgs"):
         print(f"    {c.ITALIC}{pkg}{c.ENDC}")
-    for pkg in get(group, "aurs"):
-        print(f"    {c.ITALIC}{pkg}{c.ENDC} {c.GRAY}[AUR]{c.ENDC}")
 
     print(f"  {c.GRAY}scripts:{c.ENDC}")
     for script in get(group, "scripts"):
@@ -61,12 +59,9 @@ def final_question(groups):
         exit(1)
 
 
-def install_package(package_name, aur=False):
+def install_package(package_name):
     try:
-        if aur:
-            subprocess.run(["yay", "-S", "--noconfirm", "--needed", package_name], check=True)
-        else:
-            subprocess.run(["sudo", "pacman", "-S", "--noconfirm", "--needed", package_name], check=True)
+        subprocess.run(["yay", "-S", "--noconfirm", "--needed", package_name], check=True)
         print(f"{c.BOLD}{c.OKGREEN}Package {package_name} installed successfully.{c.ENDC}")
     except subprocess.CalledProcessError as e:
         print(f"{c.FAIL}Error installing package {package_name}: {e}{c.ENDC}")
@@ -81,11 +76,6 @@ def install_packages(groups):
         for pkg in get(group, 'pkgs'):
             print(f"{c.HEADER}Installing {c.BOLD}{pkg}{c.ENDC}")
             if not install_package(pkg):
-                failed_pkgs.append(pkg)
-
-        for pkg in get(group, 'aurs'):
-            print(f"{c.HEADER}Installing {c.BOLD}{pkg}{c.ENDC}")
-            if not install_package(pkg, aur=True):
                 failed_pkgs.append(pkg)
 
     # Print failed packages
