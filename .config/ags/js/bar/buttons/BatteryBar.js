@@ -65,7 +65,6 @@ export default () => PanelButton({
             ? [WholeButton()] : [
                 Indicator(),
                 PercentLabel(),
-                LevelBar(),
             ]),
         setup: self => self.hook(Battery, w => {
             w.toggleClassName('charging', Battery.charging || Battery.charged);
