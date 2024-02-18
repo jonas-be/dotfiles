@@ -31,6 +31,10 @@ Then select what you want to install, by following the instructions of the progr
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+## Watch out Nvidia users
+
+Follow the [Hyprland Nvidia docs](https://wiki.hyprland.org/Nvidia/)
+
 ## What it does?
 
 ### install.py

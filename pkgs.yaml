@@ -80,6 +80,14 @@ apps:
     - google-chrome
     - spotify
 
+nvidia:
+  pkgs:
+    - nvidia-535xx-dkms
+    - linux-headers
+    - qt5-wayland
+    - qt5ct
+    - libva
+
 gaming:
   pkgs:
     - minecraft-launcher
