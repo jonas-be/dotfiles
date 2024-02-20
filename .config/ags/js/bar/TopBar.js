@@ -11,13 +11,10 @@ import NotificationIndicator from './buttons/NotificationIndicator.js';
 import SysTray from './buttons/SysTray.js';
 import ColorPicker from './buttons/ColorPicker.js';
 import SystemIndicators from './buttons/SystemIndicators.js';
-import PowerMenu from './buttons/PowerMenu.js';
 import ScreenRecord from './buttons/ScreenRecord.js';
 import BatteryBar from './buttons/BatteryBar.js';
 import SubMenu from './buttons/SubMenu.js';
 import Recorder from '../services/screenrecord.js';
-// import * as System from './buttons/System.js';
-// import Taskbar from './buttons/Taskbar.js';
 import options from '../options.js';
 
 const submenuItems = Variable(1);
@@ -92,8 +89,6 @@ const End = () => Widget.Box({
         BatteryBar(),
         SeparatorDot(Battery, b => b.available),
         SystemIndicators(),
-        SeparatorDot(),
-        PowerMenu(),
     ],
 });
 

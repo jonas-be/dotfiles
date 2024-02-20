@@ -112,7 +112,6 @@ $button-radius: if($bar-style == 'floating', max(0, $radii - $bar-spacing), $rad
 
     /* stylelint-disable-next-line selector-not-notation */
     .quicksettings:not(.active):not(:active) {
-        .bluetooth { color: $blue; }
 
         .battery {
             &.low { color: $red; }
