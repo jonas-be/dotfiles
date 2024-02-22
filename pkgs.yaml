@@ -23,6 +23,7 @@ shell-essentails:
     - jq
     - yq
     - less
+    - docker
 
 nvim:
   pkgs:
