@@ -8,7 +8,7 @@ export default [
     Theme({
         name: 'Kitty Dark',
         icon: '󰄛',
-        'desktop.wallpaper.img': WP + 'kittybl.jpeg',
+        'desktop.wallpaper.img': WP + 'fancy.jpeg',
     }),
     Theme({
         name: 'Kitty Light',

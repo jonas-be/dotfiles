@@ -60,13 +60,13 @@ export async function setupHyprland() {
     });
 
     batch.push(
-        `general:border_size ${border_width}`,
-        `general:gaps_out ${wm_gaps}`,
-        `general:gaps_in ${Math.floor(wm_gaps / 2)}`,
-        `general:col.active_border rgba(${accent}ff)`,
-        `general:col.inactive_border ${inactive_border}`,
-        `decoration:rounding ${radii}`,
-        `decoration:drop_shadow ${drop_shadow ? 'yes' : 'no'}`,
+        // `general:border_size ${border_width}`,
+        // `general:gaps_out ${wm_gaps}`,
+        // `general:gaps_in ${Math.floor(wm_gaps / 2)}`,
+        // `general:col.active_border rgba(${accent}ff)`,
+        // `general:col.inactive_border ${inactive_border}`,
+        // `decoration:rounding ${radii}`,
+        // `decoration:drop_shadow ${drop_shadow ? 'yes' : 'no'}`,
     );
 
     sendBatch(batch);
