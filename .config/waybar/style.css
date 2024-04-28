@@ -1,57 +1,61 @@
 * {
-    border: none;
-    border-radius: 0px;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
+  border: none;
+  border-radius: 0px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family:
+    Ubuntu NF,
+    sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+window.small {
+  background-color: #ffffff;
+  font-size: 20px;
 }
 
 window#waybar {
-    background-color: transparent;
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
-
 #workspaces button {
-    background: #1f1f1f;
-    color: #ffffff;
-    border-radius: 20px;
-
+  background: #1f1f1f;
+  color: #ffffff;
+  border-radius: 20px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    background: lightblue;
-    color: black;
-    border-bottom: 3px solid #ffffff;
-
+  background: lightblue;
+  color: transparent;
+  border-bottom: 3px solid #ffffff;
 }
 
 #workspaces button.active {
-    background: white;
+  background: white;
 }
 
 #workspaces button.active:hover {
-    background: lightblue;
-    color: black;
-    border-bottom: 3px solid #ffffff;
-
+  background: lightblue;
+  color: transparent;
+  border-bottom: 3px solid #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+  background-color: #64727d;
+  border-bottom: 3px solid #ffffff;
 }
 
 #clock,
@@ -74,216 +78,218 @@ window#waybar.hidden {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
-    color: #ffffff;
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+#clock {
+  font-weight: bold;
+  font-size: 15px;
 }
 
 #window,
 #workspaces {
-    margin: 0px 4px;
+  margin: 0px 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0px;
+  margin-left: 0px;
+  padding-left: 20px; /* 0 padding for top and bottom, 20px padding for right and left sides */
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 #clock {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #battery {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
-#battery.charging, #battery.plugged {
-    color: #26A65B;
+#battery.charging,
+#battery.plugged {
+  color: #26a65b;
 }
 
 @keyframes blink {
-    to {
-        color: #ffffff;
-    }
+  to {
+    color: #ffffff;
+  }
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 label:focus {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #cpu {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #memory {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #disk {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #backlight {
-    background-color: black;
+  background-color: transparent;
 }
 
 #network {
-    background-color: black;
-    color: #ffffff;
+  font-size: 17.5px;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #network.disconnected {
-    background-color: black;
-    color: red;
+  background-color: transparent;
+  color: red;
 }
 
 #pulseaudio {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background-color: black;
-    color: red;
+  background-color: transparent;
+  color: red;
 }
 
 #custom-media {
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    color: black;
-    border-radius: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  color: transparent;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #8EC5FC;
-    background-image: linear-gradient(160deg, #1cd25c 0%, #1a6834 100%);
-    color: white; border-radius: 20px;
-    margin-right: 5px;
-
+  background-color: #8ec5fc;
+  background-image: linear-gradient(160deg, #1cd25c 0%, #1a6834 100%);
+  color: white;
+  border-radius: 20px;
+  margin-right: 5px;
 }
 
 #custom-media.custom-vlc {
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    color: black;
-    border-radius: 20px;
-    margin-right: 5px;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  color: transparent;
+  border-radius: 20px;
+  margin-right: 5px;
 }
 
-#custom-power{
-    background-color: black;
-    font-size: 18px;
-    border-radius: 0px 20px 20px 0px;
-    margin-right: 5px;
-
+#custom-power {
+  background-color: transparent;
 }
 
-#custom-launcher{
-    background-color: black;
-    font-size: 20px;
-    border-radius: 20px 0px 0px 20px;
-    margin-left: 5px;
-
+#custom-notification {
+  padding-right: 20px;
 }
 
-#custom-layout{
-    background-color: black;
-    color: white;
-    font-size:20px;
+#custom-launcher {
+  background-color: transparent;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+#custom-layout {
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
 }
 
 #custom-updater {
-    background-color: black;
-    color: white;
+  background-color: transparent;
+  color: white;
 }
 
 #custom-snip {
-    background-color: black;
-    color: skyblue;
-    font-size: 20px;
+  background-color: transparent;
+  color: skyblue;
+  font-size: 20px;
 }
 
-
-#taskbar{
-    background-color: black;
-    border-radius: 0px 20px 20px 0px;
+#taskbar {
+  background-color: transparent;
 }
 
 #temperature {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #tray {
-    background-color: black;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
-    background-color: black;
-    color: #ffffff;
+  -gtk-icon-effect: dim;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: black;
-    color: #ffffff;
+  -gtk-icon-effect: highlight;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 #idle_inhibitor {
-    background-color: black;
-    border-radius: 20px 0px 0px 20px;
-
+  background-color: transparent;
+  border-radius: 20px 0px 0px 20px;
 }
 
 #idle_inhibitor.activated {
-    background-color: black;
-    color: #ffffff;
-    border-radius: 20px 0px 0px 20px;
-
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 20px 0px 0px 20px;
 }
 
 #language {
-    background-color: black;
-    color: #ffffff;
-    min-width: 16px;
+  background-color: transparent;
+  color: #ffffff;
+  min-width: 16px;
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    min-width: 16px;
+  background: #97e1ad;
+  color: #000000;
+  min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0px 5px;
+  padding: 0px 5px;
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
