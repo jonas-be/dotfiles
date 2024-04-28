@@ -53,6 +53,8 @@ window#waybar.hidden {
   background-color: #eb4d4b;
 }
 
+
+
 #mode {
   background-color: #64727d;
   border-bottom: 3px solid #ffffff;
@@ -83,6 +85,11 @@ window#waybar.hidden {
 }
 
 #clock {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#hyprland-window {
   font-weight: bold;
   font-size: 15px;
 }

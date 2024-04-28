@@ -3,13 +3,13 @@
   "position": "top",
   "height": 35,
   "spacing": 0,
- // "margin-top": 8,
- // "margin-left": 8,
- // "margin-right": 8,
+  // "margin-top": 8,
+  // "margin-left": 8,
+  // "margin-right": 8,
   "margin-bottom": -4,
 
   // Choose the order of the modules
-  "modules-left": ["custom/launcher", "wlr/taskbar"],
+  "modules-left": ["custom/launcher", "wlr/taskbar", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": [
     "custom/media",
