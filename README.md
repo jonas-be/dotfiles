@@ -1,5 +1,10 @@
 # Dotfiles
 
+
+> [!WARNING]  
+> The dotfiles are work in progres the instructions in this README may be outdated
+
+
 ## Pre-requisites
 
 - Arch Linux
