@@ -1,0 +1,19 @@
+#!/bin/bash
+# This script shows all local changes in the directories of the Coding folder
+
+cd ~/Coding
+
+for dir in */; do
+    if [ -d "$dir/.git" ]; then
+        cd "$dir"
+        if [[ $(git status --porcelain) ]]; then
+            echo -e "\033[0;33mThere are changes in $dir\033[0m"
+        else
+            echo -e "\033[0;32mNo local changes in $dir\033[0m"
+        fi
+        cd ..
+    else
+        echo -e "\033[0;31mNot a git repository: $dir\033[0m"
+    fi
+done
+

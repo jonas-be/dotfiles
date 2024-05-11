@@ -14,7 +14,7 @@ shell:
   dotfiles:
     - zshrc
   init-commands:
-    - scripts/install-oh-my-zsh.sh
+    - ./scripts/install/oh-my-zsh.sh
 
 shell-essentails:
   pkgs:
@@ -24,6 +24,8 @@ shell-essentails:
     - yq
     - less
     - docker
+  dotfiles:
+    - util-scripts
 
 nvim:
   pkgs:
@@ -55,20 +57,11 @@ hypr:
     - gjs
     - gvfs
 
-    - sassc
-    - polkit-gnome
-    - gnome-keyring
-    - gnome-control-center
     - networkmanager
     - brightnessctl
-    - gnome-bluetooth-3.0
 
     - hyprland
     - xdg-desktop-portal-hyprland
-
-    - aylurs-gtk-shell-git
-    - qt6gtk2
-    - swww
 
 kubernetes:
   pkgs:
@@ -92,3 +85,4 @@ nvidia:
 gaming:
   pkgs:
     - minecraft-launcher
+    - steam
