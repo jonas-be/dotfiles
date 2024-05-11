@@ -13,7 +13,7 @@ shell:
     - zsh-theme-powerlevel10k-git
   dotfiles:
     - zshrc
-  init-commands:
+  init-scripts:
     - ./scripts/install/oh-my-zsh.sh
 
 shell-essentails:

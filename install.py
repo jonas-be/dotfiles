@@ -37,8 +37,8 @@ def print_group(group):
     for pkg in get(group, "pkgs"):
         print(f"    {c.ITALIC}{pkg}{c.ENDC}")
 
-    print(f"  {c.GRAY}scripts:{c.ENDC}")
-    for script in get(group, "scripts"):
+    print(f"  {c.GRAY}init-scripts:{c.ENDC}")
+    for script in get(group, "init-scripts"):
         print(f"    {c.ITALIC}{script}{c.ENDC}")
 
     print(f"  {c.GRAY}dotfiles:{c.ENDC}")
@@ -115,6 +115,34 @@ def copy_dotfiles(groups):
         print(f"{c.OKGREEN}All dotfiles copied successfully{c.ENDC}")
 
 
+def run_init_scripts(groups):
+    failed_scripts = []
+    for group_key in groups:
+        group = config[group_key]
+        for script in get(group, 'init-scripts'):
+            print(f"{c.HEADER}Run init script {c.BOLD}{script}{c.ENDC}")
+            if not run_init_script(script):
+                failed_scripts.append(script)
+
+    # Print failed init scripts
+    if len(failed_scripts) > 0:
+        print(f"{c.FAIL}Failed to run the following init scripts:{c.ENDC}")
+        for pkg in failed_scripts:
+            print(f"  {c.BOLD}{pkg}{c.ENDC}")
+    else:
+        print(f"{c.OKGREEN}All init scripts ran successfully{c.ENDC}")
+
+
+def run_init_script(script):
+    try:
+        subprocess.run([script], check=True)
+        print(f"{c.BOLD}{c.OKGREEN}Init script {script} ran successfully.{c.ENDC}")
+    except subprocess.CalledProcessError as e:
+        print(f"{c.FAIL}Error running init script {script}: {e}{c.ENDC}")
+        return False
+    return True
+
+
 # Read YAML file
 with open(yaml_file, "r") as yaml_file:
     config = yaml.safe_load(yaml_file)
@@ -128,3 +156,6 @@ install_packages(groups)
 
 print(f"\n{c.BOLD}Copy dotfiles...{c.ENDC}")
 copy_dotfiles(groups)
+
+print(f"\n{c.BOLD}Run init scripts...{c.ENDC}")
+run_init_scripts(groups)
