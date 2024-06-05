@@ -29,13 +29,6 @@ python install.py
 
 Then select what you want to install, by following the instructions of the program.
 
-## Things to install/configure manually
-
-```bash
-# Oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
 ## Watch out Nvidia users
 
 Follow the [Hyprland Nvidia docs](https://wiki.hyprland.org/Nvidia/)
@@ -98,7 +91,3 @@ python dotcopy.py put <entry>
 # Copy dotfiles from the host system to the repo
 python dotcopy.py get <entry>
 ```
-
-## Special thanks
-
- - [Aylur](https://github.com/Aylur) for making ags and his dotfiles *(my ags config are currently almost copy paste)*
