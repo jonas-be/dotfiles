@@ -60,8 +60,17 @@ hypr:
     - networkmanager
     - brightnessctl
 
+    - waybar
+    - wofi
+
     - hyprland
+    - hyprpaper
+    - hyprlock
     - xdg-desktop-portal-hyprland
+  dotfiles:
+    - hypr
+    - wofi
+    - wayland
 
 kubernetes:
   pkgs:
@@ -78,6 +87,7 @@ nvidia:
   pkgs:
     - nvidia-535xx-dkms
     - linux-headers
+    - egl-wayland
     - qt5-wayland
     - qt5ct
     - libva
