@@ -10,19 +10,19 @@ selection=$(echo -e $entries | wofi --dmenu --prompt="Power Menu")
 case $selection in
     "Logout")
         # Command for Logout
-        echo "hyprctl dispatch exit"
+        hyprctl dispatch exit
         ;;
     "Sleep")
         # Command for Sleep
-        echo "systemctl suspend"
+        systemctl suspend
         ;;
     "Restart")
         # Command for Restart
-        echo "systemctl reboot"
+        systemctl reboot
         ;;
     "Power Off")
         # Command for Power Off
-        echo "systemctl poweroff"
+        systemctl poweroff
         ;;
     *)
         # Default case if no valid option is selected
