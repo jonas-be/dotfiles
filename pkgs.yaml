@@ -47,6 +47,8 @@ hypr:
     - pipewire-pulse
 
     - bluez
+    - blueman
+    - pavucontrol
     - playerctl
     - wl-clipboard
     - grim
