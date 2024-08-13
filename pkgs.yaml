@@ -13,6 +13,7 @@ shell:
     - zsh-theme-powerlevel10k-git
   dotfiles:
     - zshrc
+    - alacritty
   init-scripts:
     - ./scripts/install/oh-my-zsh.sh
 
@@ -67,10 +68,12 @@ hypr:
     - hyprpaper
     - hyprlock
     - xdg-desktop-portal-hyprland
+    - gnome
   dotfiles:
     - hypr
     - wofi
     - wayland
+    - lib-scripts
 
 kubernetes:
   pkgs:
