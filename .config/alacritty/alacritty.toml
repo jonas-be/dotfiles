@@ -12,3 +12,6 @@ style = "Italic"
 [font.normal]
 family = "JetBrainsMono NF"
 style = "Regular"
+
+[env]
+TERM = "xterm-256color"
