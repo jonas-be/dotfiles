@@ -19,6 +19,7 @@ shell:
 
 shell-essentails:
   pkgs:
+    - tmux
     - github-cli
     - thefuck
     - jq
