@@ -35,6 +35,7 @@ nvim:
     - ripgrep
     - fd
     - lazygit
+    - luarocks
     - neovim
   dotfiles:
     - nvim
@@ -68,6 +69,7 @@ hypr:
     - wofi
 
     - hyprland
+    - hypridle
     - hyprpaper
     - hyprlock
     - xdg-desktop-portal-hyprland
